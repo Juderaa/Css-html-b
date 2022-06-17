@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 375px)" href="small-style.css" />
+    <link rel="stylesheet" media="screen and (max-width: 375px)" href="big-style.css" /> -->
+    <title>FORM</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (min-width: 375px){
+  body {
+    background-color: hsl(0, 100%, 74%);
+    background-image: url('bg-intro-desktop.png');
+    color: hsl(0, 0%, 95%);
+    font-family: 'Poppins', sans-serif;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;    
+    margin: auto;
+    width: 90%;
+}
+.d1 {
+    margin: 20px;
+    width: 50%;
+}
+.d2 {
+    color: hsl(0, 3%, 81%);
+    text-align: center;
+    background-color: hsl(248, 32%, 49%);
+    box-shadow: 0px 5px hsla(0, 0%, 100%, 0.75);
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 110%;
+}
+}
+.d3 {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 110%;
+    border: 1px solid;
+    box-shadow: 0px 5px hsla(0, 0%, 100%, 0.75);
+    
+}
+
+
+@media (max-width: 375px) {
+  body {
+    background-color: hsl(0, 100%, 74%);
+    background-image: url('bg-intro-mobile.png');
+    color: hsl(0, 0%, 95%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+.d1 {
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    width: 100%;
+}
+.d2 {
+    color: hsl(0, 3%, 81%);
+    text-align: center;
+    background-color: hsl(248, 32%, 49%);
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 5px hsla(0, 0%, 100%, 0.75);
+    
+}
+.d3 {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 0px 5px hsla(0, 0%, 100%, 0.75);
+    width: 100%;
+   
+}
+}
+
+form{
+    padding: 10px;
+    width: 100%;
+}
+
+input {
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: hsl(0, 100%, 74%);
+    padding: 0 30px 0 50px;
+    font-style: italic;
+    font-size: 0.8em;
+    text-align: right;
+    position: relative;
+    top: -30px;
+}
+input:required:valid~.error-message,
+input:focus:valid~.error-message {
+    visibility: hidden;
+}
+
+input:required:invalid,
+input:focus:invalid {
+    background-image: url(icon-error.svg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    border-color: red;
+    color: red;
+    background-color: #fffafa;
+}
+
+
+.bttn {
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+    width: 100%;
+    padding: 12px;
+    border: 1px solid hsl(154, 60%, 40%);
+    border-radius: 4px;
+}
+
+.bttn:hover {
+    background-color: hsl(154, 51%, 69%);
+    cursor: pointer;
+}
+
+.d3 p {
+    color: hsl(0, 3%, 81%);
+}
+
+.d3 a {
+    color: red;
+    text-decoration: none;
+}
+</style>
+<body>
+    <main>
+        <div class="d1">
+            <h1>Learn to code by watching others</h1><br>
+            <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+                understanding how developers think is invaluable.
+            </p>
+        </div>
+        <div>
+            <div class="d2"><span style="color: white;">Try it free 7 days</span> then $20/mo. thereafter</div>
+            <div class="d3">
+            <form>
+
+                    <input type="text" placeholder="First Name" name="Fname" required>
+                    <div class="error-message"> First Name Cannot be empty</div>
+
+                    <input type="text" placeholder="Last Name" name="Lname" required>
+                    <div class="error-message" data-error="">Last Name Cannot be empty</div>
+
+
+                    <input type="email" placeholder="Email Address" name="email" required>
+                    <div class="error-message"> Looks like this is not an email</div>
+
+                    <input type="password" placeholder="Password" name="pswrd" required>
+                    <div class="error-message"> Password cannot be empty</div>
+
+                    <button class="bttn">CLAIM YOUR FREE TRIAL</button>
+                    <p style=" font-size:10px;">By clicking the button you are agreeing to our <a href="">Terms and
+                        Services</a></small></p>
+            </div>
+
+            </form>
+
+        </div>
+
+    </main>
+</body>
+
+
+</html>
