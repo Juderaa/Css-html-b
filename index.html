@@ -23,8 +23,7 @@
     background-color: hsl(0, 100%, 74%);
     background-image: url('bg-intro-desktop.png');
     color: hsl(0, 0%, 95%);
-    font-family: 'Poppins', sans-serif;    
-    height: 120vh;
+    font-family: 'Poppins', sans-serif;
 
   }
   main {
@@ -98,7 +97,6 @@ input:focus:invalid {
     background-color: #fffafa;
 }
 
-
 .bttn {
     color: white;
     background-color: hsl(154, 59%, 51%);
@@ -128,7 +126,8 @@ input:focus:invalid {
     background-image: url('bg-intro-mobile.png');
     color: hsl(0, 0%, 95%);
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 16px;        
+    height: 120vh;
   }
   main {
     display: flex;
@@ -168,8 +167,11 @@ input:focus:invalid {
     width: 90%;
     margin: auto;   
 }
+label {
+      right: 50px;
 }
 
+}
 </style>
 <body>
     <main>
@@ -183,13 +185,12 @@ input:focus:invalid {
             <div class="d2"><b>Try it free 7 days</b> then $20/mo. thereafter</div>
             <div class="d3">
             <form>
-
+                
                     <input type="text" placeholder="First Name" name="Fname" class="input" required>
                     <div class="error-message"> First Name Cannot be empty</div>
-                
-                    <input type="text" placeholder="Last Name" name="Lname" class="input" required>
+                   
+                    <input type="text" placeholder="First Name" name="Lname" class="input" required>
                     <div class="error-message" >Last Name Cannot be empty</div>
-
 
                     <input type="email" placeholder="Email Address" name="email" class="input" required>
                     <div class="error-message"> Looks like this is not an email</div>
@@ -207,11 +208,7 @@ input:focus:invalid {
         </div>
 
     </main>
-    <script>
-        document.querySelectorAll(".error-message[data-error] input").forEach(inpE1 => {
-            inpE1.addEventListener('input', () => inpE1.parentElement.removeAttribute('data-error') )
-        });
-    </script>
+
 </body>
 
 
